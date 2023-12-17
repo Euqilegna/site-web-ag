@@ -1,0 +1,6 @@
+@use "@angular/material" as mat;
+@import "palette";
+
+$agwebsite-primary: mat.define-palette($md-primary);
+$agwebsite-accent: mat.define-palette($md-accent);
+$agwebsite-warn: mat.define-palette($md-warn);

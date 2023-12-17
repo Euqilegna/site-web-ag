@@ -1,0 +1,239 @@
+<div class="container-fluid h-100 m-0 p-0 overflow-auto background-color-body position-relative">
+
+  <!-- DESKTOP HEADER -->
+  <div class="d-none d-xl-block flex-1">
+    <div id="header" class="d-flex m-4 p-5 position-relative z-1 align-items-center">
+      <div class="mat-headline-1 m-0"> AG </div>
+      <div id="menu" class="d-flex w-100 mat-body-2 justify-content-end">
+        <div class="d-flex w-75 justify-content-evenly background_menu p-3">
+          <a href="#home" class="link-dark link-underline link-underline-opacity-0"><b>home</b></a>
+          <a href="#about" class="link-dark link-underline link-underline-opacity-0"><b>a propos</b></a>
+          <a href="#skill" class="link-dark link-underline link-underline-opacity-0"><b>skills</b></a>
+          <a href="#portfolio" class="link-dark link-underline link-underline-opacity-0"><b>portfolio</b></a>
+          <a href="#contact" class="link-dark link-underline link-underline-opacity-0"><b>contact</b></a>
+        </div>
+      </div>
+    </div>
+    <div class="imgHeader">
+      <img class="d-flex w-75 position-absolute end-0" src="../assets/image/background_header.png">
+    </div>
+  </div>
+
+  <!-- MOBILE HEADER -->
+  <div class="d-block d-xl-none flex-1">
+    <div id="header" class="d-flex p-5 align-items-center">
+      <div class="mat-headline-1 m-0"> AG </div>
+      <div id="menu" class="d-flex w-100 mat-body-2 justify-content-end">
+        <button mat-mini-fab [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <a href="#home" class="link-dark link-underline link-underline-opacity-0"><b>home</b></a>
+          </button>
+          <button mat-menu-item>
+            <a href="#about" class="link-dark link-underline link-underline-opacity-0"><b>a propos</b></a>
+          </button>
+          <button mat-menu-item>
+            <a href="#skill" class="link-dark link-underline link-underline-opacity-0"><b>skills</b></a>
+          </button>
+          <button mat-menu-item>
+            <a href="#portfolio" class="link-dark link-underline link-underline-opacity-0"><b>portfolio</b></a>
+          </button>
+          <button mat-menu-item>
+            <a href="#contact" class="link-dark link-underline link-underline-opacity-0"><b>contact</b></a>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <img class="d-flex width-img-header height-img-header" src="../assets/image/background_header_mobile.png">
+    </div>
+  </div>
+
+ <!-- HOME -->
+  <div id="home" class="d-flex ms-xl-5 p-5">
+    <div class="d-flex flex-column align-items-xl-start align-items-sm-center text-justify my-xl-5">
+      <h1 id="anim-title-presentation" class="mt-5 pt-5">
+        <div class="anim py-1">Bonjour</div>
+        <div class="animdiv">
+          <span>je suis Angélique 🖐🏻 </span>
+        </div>
+      </h1>
+      <span class="mat-body-1 d-flex col-lg-4 pt-5">
+        Je suis développeuse web junior, je touche à tout mais surtout, j'adore le Front et me casser la tête à
+        center
+        une div en css (ceux qui savent, savent).Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+        ut
+        neque finibus, sodales tortor nec, eleifend tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas ut neque finibus, sodales tortor nec, eleifend tortor.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit.
+      </span>
+      <div class="">
+        <button mat-raised-button color="warn" class="m-2 p-4">
+          <a href="../assets/files/angelique_grincourt_cv.pdf"
+            class="mat-button link-dark link-underline link-underline-opacity-0" download="angelique_grincourt_cv.pdf">
+            <fa-icon [icon]="iconDownload"></fa-icon> Télécharger mon CV
+          </a>
+        </button>
+        <button mat-raised-button color="warn" class="m-2 p-4">
+          <a href="" class="mat-button link-dark link-underline link-underline-opacity-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25"
+              viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+            </svg>
+            Repo Git
+          </a>
+        </button>
+      </div>
+      <div id="localisation" class="d-flex align-items-center justify-content-center w-50 mt-5">
+        <img class="width-location height-location" src="../assets/image/localisation_img.png">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ABOUT -->
+  <div id="about" class="p-5">
+    <div class="d-flex flex-column">
+      <h1 id="animH1About">A PROPOS</h1>
+      <h2 id="animH2About">Crafting stories through design and innovation</h2>
+    </div>
+    <div class="d-flex flex-column flex-xl-row align-items-center">
+      <div class="colg-lg-6 mx-5 p-5">
+        <img class="width-img-about height-img-about" src="../assets/image/pp_about.png">
+      </div>
+      <div class="colg-lg-6 d-flex flex-column justify-content-evenly">
+        <div class="p-5">
+          <h2 id="animTitleAbout">Mes valeurs</h2>
+          <span class="mat-body-1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed
+            thisnquia consequuntur
+            magni
+            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+            sit
+            amet</span>
+        </div>
+        <div class="p-5">
+          <h2 id="animTitle2About">Mon ambition</h2>
+          <span class="mat-body-1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed
+            thisnquia consequuntur
+            magni
+            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+            sit
+            amet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="skills d-flex justify-content-center">
+    <div class="skills__web w-100">
+      <div class="d-flex flex-column p-5">
+        <h1 id="animH1Skills" class="text-white">SKILLS</h1>
+        <h2 id="animH2Skills" class="text-white">
+          Bringing your vision to life with precision and passion
+        </h2>
+      </div>
+      <div class="d-flex flex-column flex-xl-row align-items-center justify-content-center pb-5">
+        <div class="d-flex p-5 position-relative">
+          <div class="card d-flex align-items-center justify-content-center">
+            <h1>Web Design</h1>
+            <span>Coucou</span>
+            <div class="d-flex align-items-center px-3 logo">
+              <img src="../assets/image/logo_figma.png" width="100" height="100"
+                class="d-flex justify-content-between align-items-center m-2">
+              <img src="../assets/image/logo_abobe.png" width="60" height="60"
+                class="d-flex justify-content-between align-items-center m-2">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex p-5 position-relative">
+          <div class="card d-flex align-items-center justify-content-center">
+            <h1>Front</h1>
+            <span>Coucou</span>
+            <div class="d-flex align-items-center px-3 logo">
+              <img src="../assets/image/logo_angular.png" width="80" height="80"
+                class="d-flex justify-content-between align-items-center m-2">
+              <img src="../assets/image/logo_bootstrap.png" width="70" height="60"
+                class="d-flex justify-content-between align-items-center m-2">
+              <img src="../assets/image/logo_scss.png" width="70" height="70"
+                class="d-flex justify-content-between align-items-center m-2">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex p-5 position-relative">
+          <div class="card d-flex align-items-center justify-content-center ">
+            <h1>Back</h1>
+            <span>Coucou</span>
+            <div class="d-flex align-items-center px-3 logo">
+              <img src="../assets/image/logo_nestjs.png" width="70" height="70"
+                class="d-flex justify-content-between align-items-center m-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PORTFOLIO -->
+  <div id="portfolio">
+    <div class="d-flex flex-column p-5">
+      <h1 id="animH1Portfolio"> PORTFOLIO </h1>
+      <h2 id="animH2Portfolio"> Mes projets </h2>
+    </div>
+    <div class="ms-5 ps-5 flex-column flex-xl-row">
+      <div class="card d-flex align-items-center justify-content-center">
+        <h2 class="text-center">
+          My Pocket Bookshelf
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTACT -->
+  <div id="contact" class="position-relative">
+    <h1 class="d-flex justify-content-center p-3">Contact</h1>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="d-flex flex-column align-items-center">
+        <div class="mail d-flex text-center py-3">
+          <fa-icon [icon]="iconMail"></fa-icon>
+          <a href="mailto:angelique.grnt@gmail.com"
+            class="mx-2 link-dark link-underline link-underline-opacity-0">angelique.grnt&#64;gmail.com</a>
+        </div>
+        <div class="mx-2 linkedin d-flex py-3 text-center align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg>
+          <a href="profillinkedin" class=" mx-2 link-dark link-underline link-underline-opacity-0">Profil
+            Linkedin</a>
+        </div>
+        <div class="git d-flex text-center  py-3">
+          <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25"
+            viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+          </svg>
+          <a href="https://github.com/Euqilegna" class="mx-2 link-dark link-underline link-underline-opacity-0">
+            Repo Git
+          </a>
+        </div>
+        <div class="d-flex py-3">
+          <button mat-raised-button color="warn" class=" p-4">
+            <a href="../assets/files/angelique_grincourt_cv.pdf" class="mat-button link-dark link-underline link-underline-opacity-0"
+              download="angelique_grincourt_cv.pdf">
+              <fa-icon [icon]="iconDownload"></fa-icon>
+              Télécharger mon CV
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <span class="mat-body-1 d-flex justify-content-center"> Copyright 2023 - Angélique Grincourt </span>
+  </div>
+</div>
