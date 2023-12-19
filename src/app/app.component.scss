@@ -1,7 +1,6 @@
 @import "../assets/css/mixins/mixins-screen";
 @import "../assets/css/variables/custom_variables";
 
-
 .background {
     &_menu {
         backdrop-filter: blur(10px);
@@ -43,13 +42,11 @@
 .skills {
     background-image: url("../assets/image/background_skills.png");
     &__desktop {
-        height: 800px;
+        height: 250px;
     }
 }
 
 .card {
-    width: 350px;
-    height: 350px;
     backdrop-filter: blur(10px);
     background: linear-gradient(
         36deg,
@@ -62,17 +59,22 @@
 
 // ===========< Portfolio >===========
 
+.background-img-portfolio {
+    background-image: url("../assets/image/background_user_book.png");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.card-projet-portfolio {
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+}
 
 // ===========< Contact >===========
-
-
 
 // ===========< Mixins >===========
 @each $breakpoint in $breakpointsKeys {
     @include mq($breakpoint) {
-        .width-img-header {
-            width: map-get($custom-width-img-header, $breakpoint);
-        }
         .height-img-header {
             height: map-get($custom-height-img-header, $breakpoint);
         }
@@ -88,110 +90,5 @@
         .height-img-about {
             height: map-get($custom-height-img-about, $breakpoint);
         }
-    }
-}
-
-// ===========< Animations >===========
-.wave {
-    position: relative;
-}
-
-.wave span {
-    position: relative;
-    display: inline-block;
-    animation: animate 3s ease-in;
-    animation-delay: calc(0.1s * var(--i));
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(0px);
-        opacity: 0;
-    }
-
-    20% {
-        transform: translateY(-20px);
-        opacity: 0.2;
-    }
-
-    40%,
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-.anim {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.anim:first-of-type {
-    /* For increasing performance 
-                         ID/Class should've been used. 
-                         For a small demo 
-                         it's okaish for now */
-    animation: showup 7s infinite;
-}
-
-.anim:last-of-type {
-    width: 0px;
-    animation: reveal 7s infinite;
-}
-
-.animdiv:last-of-type span {
-    margin-left: -355px;
-    animation: slidein 7s infinite;
-}
-
-@keyframes showup {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes slidein {
-    0% {
-        margin-left: -800px;
-    }
-    20% {
-        margin-left: -800px;
-    }
-    35% {
-        margin-left: 0px;
-    }
-    100% {
-        margin-left: 0px;
-    }
-}
-
-@keyframes reveal {
-    0% {
-        opacity: 0;
-        width: 0px;
-    }
-    20% {
-        opacity: 1;
-        width: 0px;
-    }
-    30% {
-        width: 355px;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        width: 355px;
     }
 }

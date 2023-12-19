@@ -47,29 +47,31 @@
       </div>
     </div>
     <div class="d-flex align-items-center">
-      <img class="d-flex width-img-header height-img-header" src="../assets/image/background_header_mobile.png">
+      <img class="d-flex height-img-header w-100" src="../assets/image/background_header_mobile.png">
     </div>
   </div>
 
- <!-- HOME -->
+  <!-- HOME -->
   <div id="home" class="d-flex ms-xl-5 p-5">
     <div class="d-flex flex-column align-items-xl-start align-items-sm-center text-justify my-xl-5">
-      <h1 id="anim-title-presentation" class="mt-5 pt-5">
-        <div class="anim py-1">Bonjour</div>
-        <div class="animdiv">
-          <span>je suis Angélique 🖐🏻 </span>
+      <h1 class="mt-5 pt-5">
+        <div class="pb-2">Bonjour,</div>
+        <div #emojiContainer id="emojiContainer">
+          <span class="d-flex "> je suis Angélique <p class="ps-2" *ngIf="animEmojiVisible" [@hello]="animState"
+              (@hello.done)="animState = !animState"> 🖐🏻 </p>
+          </span>
         </div>
       </h1>
       <span class="mat-body-1 d-flex col-lg-4 pt-5">
-        Je suis développeuse web junior, je touche à tout mais surtout, j'adore le Front et me casser la tête à
-        center
-        une div en css (ceux qui savent, savent).Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        ut
-        neque finibus, sodales tortor nec, eleifend tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Maecenas ut neque finibus, sodales tortor nec, eleifend tortor.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit.
+        Je suis développeuse web junior, je touche à tout mais surtout, j'adore me casser la
+        tête à center une div en css (ceux qui savent, savent).<br>
+        Plus sérieusement, j'adore tout ce qui touche au design et à l'ésthetisme. J'aime quand les
+        projets soit beaux, pas trop chargé et pratique. Mais, ce que j'aime par
+        dessus tout : leur donner vie. J'ai une apétence pour le Front (mais je peut être une back-up sur du Back). Je
+        vois le Front comme un terrain de jeux, c'est la ou je m'amuse le plus. J'ai encore beaucoup de chose à
+        apprendre mais je suis motivée à relever des challenges.
       </span>
-      <div class="">
+      <div>
         <button mat-raised-button color="warn" class="m-2 p-4">
           <a href="../assets/files/angelique_grincourt_cv.pdf"
             class="mat-button link-dark link-underline link-underline-opacity-0" download="angelique_grincourt_cv.pdf">
@@ -96,52 +98,66 @@
 
   <!-- ABOUT -->
   <div id="about" class="p-5">
-    <div class="d-flex flex-column">
-      <h1 id="animH1About">A PROPOS</h1>
-      <h2 id="animH2About">Crafting stories through design and innovation</h2>
+    <div #aboutTitleContainer id="aboutTitleContainer" class="d-flex flex-column" style="height: 95px;">
+      <h1 *ngIf="animH1AboutVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave]>
+        A PROPOS
+      </h1>
+      <h2 *ngIf="animH2AboutVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave]> Développer ses capacités pour les mettres
+        aux services des projets </h2>
     </div>
     <div class="d-flex flex-column flex-xl-row align-items-center">
-      <div class="colg-lg-6 mx-5 p-5">
+      <div class="colg-lg-6 mx-5 p-2">
         <img class="width-img-about height-img-about" src="../assets/image/pp_about.png">
       </div>
       <div class="colg-lg-6 d-flex flex-column justify-content-evenly">
         <div class="p-5">
-          <h2 id="animTitleAbout">Mes valeurs</h2>
-          <span class="mat-body-1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed
-            thisnquia consequuntur
-            magni
-            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-            sit
-            amet</span>
+          <h2> Mes valeurs</h2>
+          <span class="mat-body-1">
+            J’ai à coeur d’être à l’<b>écoute, investie et capable de prendre du recul </b> sur les situations.
+            Pour moi, la <b>communication est la clé</b>. Je préfère quand les choses sont claires, nettes et précises,
+            je n'aime pas les "à peu près".
+            Mon <b>équilibre vie professionnelle/vie personnelle</b> est très important pour moi et même si je suis
+            disposée à répondre aux besoins quand cela est necessaire,
+            <b> je connais mes limites </b> et n'hésiterez pas à les poser (ou re-poser) si besoin.
+
+          </span>
         </div>
         <div class="p-5">
-          <h2 id="animTitle2About">Mon ambition</h2>
-          <span class="mat-body-1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed
-            thisnquia consequuntur
-            magni
-            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-            sit
-            amet</span>
+          <h2> Mon ambition </h2>
+          <span class="mat-body-1">
+            <b> Apprendre et croire en soi. </b><br>
+            Me <b>développer techniquement et personnellement</b> pour pouvoir avancer, que ce soit seule ou en équipe.
+            Pouvoir
+            apporter ma touche personnelle, mon grain de folie et créer des <b> projets fun, créatifs et complexes</b>.
+            Evoluer
+            grâce à des challenges, de l'innovation et des envies toujours plus folles.
+            "Sky is the limit" comme on dit.
+          </span>
         </div>
       </div>
     </div>
   </div>
 
   <!-- SKILLS -->
-  <div id="skills" class="skills d-flex justify-content-center">
-    <div class="skills__web w-100">
-      <div class="d-flex flex-column p-5">
-        <h1 id="animH1Skills" class="text-white">SKILLS</h1>
-        <h2 id="animH2Skills" class="text-white">
-          Bringing your vision to life with precision and passion
-        </h2>
+  <div id="skills" class="skills d-flex flex-column justify-content-center">
+    <div class="skills__desktop w-100">
+      <div #skillsTitleContainer id="skillsTitleContainer" class="d-flex flex-column p-5" style="height: 200px;">
+        <h1 *ngIf="animH1SkillsVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave] class="text-white">SKILLS</h1>
+        <h2 *ngIf="animH2SkillsVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave] class="text-white"> Capter et comprendre
+          les besoins pour donner vie aux envies</h2>
       </div>
-      <div class="d-flex flex-column flex-xl-row align-items-center justify-content-center pb-5">
-        <div class="d-flex p-5 position-relative">
-          <div class="card d-flex align-items-center justify-content-center">
-            <h1>Web Design</h1>
-            <span>Coucou</span>
-            <div class="d-flex align-items-center px-3 logo">
+    </div>
+    <div #skillsCardsContainer id="skillsCardsContainer"
+      class="w-100 d-flex flex-column flex-xl-row align-items-center text-center pb-5 m-auto">
+      <div class="d-flex">
+        <div *ngIf="animCard1SkillsVisible" [@bounceInRightOnEnter] [@bounceOutRightOnLeave]
+          class="card w-100 p-5 m-3 d-flex align-items-center justify-content-center">
+          <h1>Web Design</h1>
+          <span>J’adore créer et prototyper des interfaces pour aider chacuns à se projeter dans une simple idée ou un
+            projet clair.</span>
+          <div class="pt-5">
+            <span>Mes outils : </span>
+            <div class="d-flex align-items-center justify-content-center logo">
               <img src="../assets/image/logo_figma.png" width="100" height="100"
                 class="d-flex justify-content-between align-items-center m-2">
               <img src="../assets/image/logo_abobe.png" width="60" height="60"
@@ -149,25 +165,37 @@
             </div>
           </div>
         </div>
-        <div class="d-flex p-5 position-relative">
-          <div class="card d-flex align-items-center justify-content-center">
-            <h1>Front</h1>
-            <span>Coucou</span>
-            <div class="d-flex align-items-center px-3 logo">
-              <img src="../assets/image/logo_angular.png" width="80" height="80"
+      </div>
+      <div class="d-flex">
+        <div *ngIf="animCard2SkillsVisible" [@bounceInRightOnEnter] [@bounceOutRightOnLeave]
+          class="card w-100 p-5 m-3 d-flex align-items-center justify-content-center">
+          <h1>Front</h1>
+          <span>
+            Bienvenue dans la partie immergée de l'Iceberg, celle que j'aime le plus explorer car, pour moi, c'est ici
+            que je donne vie aux projets que je développe et ou je peux exprimer ma créativité.
+          </span>
+          <div class="pt-5">
+            <span>Mes outils : </span>
+            <div class="d-flex align-items-center justify-content-center logo">
+              <img src="../assets/image/logo_angular.png" width="100" height="100"
                 class="d-flex justify-content-between align-items-center m-2">
-              <img src="../assets/image/logo_bootstrap.png" width="70" height="60"
+              <img src="../assets/image/logo_bootstrap.png" width="60" height="60"
                 class="d-flex justify-content-between align-items-center m-2">
-              <img src="../assets/image/logo_scss.png" width="70" height="70"
+              <img src="../assets/image/logo_scss.png" width="60" height="60"
                 class="d-flex justify-content-between align-items-center m-2">
             </div>
           </div>
         </div>
-        <div class="d-flex p-5 position-relative">
-          <div class="card d-flex align-items-center justify-content-center ">
-            <h1>Back</h1>
-            <span>Coucou</span>
-            <div class="d-flex align-items-center px-3 logo">
+      </div>
+      <div class="d-flex">
+        <div *ngIf="animCard3SkillsVisible" [@bounceInRightOnEnter] [@bounceOutRightOnLeave]
+          class="card w-100 p-5 m-3 d-flex align-items-center justify-content-center ">
+          <h1>Back</h1>
+          <span> Partie intégrante du developpement complet d'une application, j'aime savoir ce qu'il se passe côté API
+            et pouvoir manipuler des données. </span>
+          <div class="pt-5">
+            <span> Mes outils :</span>
+            <div class="d-flex align-items-center justify-content-center logo">
               <img src="../assets/image/logo_nestjs.png" width="70" height="70"
                 class="d-flex justify-content-between align-items-center m-2">
             </div>
@@ -178,17 +206,35 @@
   </div>
 
 
+
   <!-- PORTFOLIO -->
-  <div id="portfolio">
-    <div class="d-flex flex-column p-5">
-      <h1 id="animH1Portfolio"> PORTFOLIO </h1>
-      <h2 id="animH2Portfolio"> Mes projets </h2>
+  <div id="portfolio" class="pb-5">
+    <div #portfolioTitleContainer id="portfolioTitleContainer" class="d-flex flex-column p-5" style="height: 250px;">
+      <h1 *ngIf="animH1PortfolioVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave]>
+        PORTFOLIO
+      </h1>
+      <h2 *ngIf="animH2PortfolioVisible" [@fadeInUpOnEnter] [@fadeOutUpOnLeave]> Créer, tester, recommencer</h2>
     </div>
-    <div class="ms-5 ps-5 flex-column flex-xl-row">
-      <div class="card d-flex align-items-center justify-content-center">
-        <h2 class="text-center">
-          My Pocket Bookshelf
-        </h2>
+    <div class="d-flex flex-column flex-xl-row">
+      <div class="background-img-portfolio">
+        <div class="card-projet-portfolio d-flex w-100 flex-column align-items-center justify-content-start">
+          <div class="m-5 text-center w-50">
+            <h2>
+              My Pocket Bookshelf
+            </h2>
+            <span><b> MyPocketBookshelf est une application web qui permet d’avoir sa bibliothèque dans sa poche (d'où
+                le nom de l’application!). L’idée m’est venue car j’ai une très (trop) grande collection de livres et
+                parfois je ne sais plus quel livre j’ai ou non. C’est aussi un terrain de jeu personnel pour tester des
+                fonctionnalités et pouvoir développer mes
+                compétences techniques avec un contexte réel.</b></span>
+          </div>
+          <div class="py-5 d-flex flex-xl-row flex-column">
+            <img src="../assets/image/auht-screen.PNG" width="220" height="450">
+            <img src="../assets/image/dashboard-screen.PNG" width="220" height="450">
+            <img src="../assets/image/dashboard-bibli-screen.PNG" width="220" height="450">
+            <img src="../assets/image/dashboard-whishlist-screen.PNG" width="220" height="450">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -225,7 +271,8 @@
         </div>
         <div class="d-flex py-3">
           <button mat-raised-button color="warn" class=" p-4">
-            <a href="../assets/files/angelique_grincourt_cv.pdf" class="mat-button link-dark link-underline link-underline-opacity-0"
+            <a href="../assets/files/angelique_grincourt_cv.pdf"
+              class="mat-button link-dark link-underline link-underline-opacity-0"
               download="angelique_grincourt_cv.pdf">
               <fa-icon [icon]="iconDownload"></fa-icon>
               Télécharger mon CV
@@ -236,4 +283,3 @@
     </div>
     <span class="mat-body-1 d-flex justify-content-center"> Copyright 2023 - Angélique Grincourt </span>
   </div>
-</div>
