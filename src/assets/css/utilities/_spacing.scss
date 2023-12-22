@@ -1,0 +1,153 @@
+@import "../variables/_spacing";
+
+@for $i from 1 through 20 {
+    .w-#{$i*5} {
+        width: calc($i * 5%) !important;
+        min-width: calc($i * 5%) !important;
+        max-width: calc($i * 5%) !important;
+    }
+
+    .w-#{$i*5}_half {
+        width: calc($i * 5% + 2.5%) !important;
+        min-width: calc($i * 5% + 2.5%) !important;
+        max-width: calc($i * 5% + 2.5%) !important;
+    }
+
+    .w-px-#{$i*20} {
+        width: calc($i * 20px) !important;
+        min-width: calc($i * 20px) !important;
+        max-width: calc($i * 20px) !important;
+    }
+}
+
+.flex-0 {
+    flex: 0 !important;
+}
+
+.flex-n {
+    flex: none !important;
+}
+
+.flex-100 {
+    flex: 1 180% !important;
+}
+
+@for $i from 1 through 10 {
+    .flex-#{$i} {
+        flex: $i !important;
+    }
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.app-padding-margin {
+    @each $breakpoint in $breakpointsKeys {
+        @include mq($breakpoint) {
+            $base: map-get($base-paddings-margins, $breakpoint);
+            .b-r {
+                border-radius: map-get($base-input-radiuss, $breakpoint);
+            }
+
+            @for $i from 0 through 5 {
+                .m-#{$i} {
+                    margin: calc($base * $i) !important;
+                }
+
+                .ml-#{$i} {
+                    margin-left: calc($base * $i) !important;
+                }
+
+                .mt-#{$i} {
+                    margin-top: calc($base * $i) !important;
+                }
+
+                .mr-#{$i} {
+                    margin-right: calc($base * $i) !important;
+                }
+
+                .mb-#{$i} {
+                    margin-bottom: calc($base * $i) !important;
+                }
+
+                .p-#{$i} {
+                    padding: calc($base * $i) !important;
+                }
+
+                .pl-#{$i} {
+                    padding-left: calc($base * $i) !important;
+                }
+
+                .pt-#{$i} {
+                    padding-top: calc($base * $i) !important;
+                }
+
+                .pr-#{$i} {
+                    padding-right: calc($base * $i) !important;
+                }
+
+                .pb-#{$i} {
+                    padding-bottom: calc($base * $i) !important;
+                }
+
+                .b-#{$i} {
+                    border-width: calc(1px * $i) !important;
+                    border-style: solid;
+                }
+
+                .bl-#{$i} {
+                    border-width: 0 0 0 calc(1px * $i) !important;
+                    border-style: solid;
+                }
+
+                .bt-#{$i} {
+                    border-width: calc(1px * $i) 0 0 0 !important;
+                    border-style: solid;
+                }
+
+                .br-#{$i} {
+                    border-width: 0 calc(1px * $i) 0 0 !important;
+                    border-style: solid;
+                }
+
+                .bb-#{$i} {
+                    border-width: 0 0 calc(1px * $i) 0 !important;
+                    border-style: solid;
+                }
+
+                .position-top-#{$i} {
+                    top: calc($base * $i * 2) !important;
+                }
+
+                .position-bottom-#{$i} {
+                    bottom: calc($base * $i * 2) !important;
+                }
+
+                .position-left-#{$i} {
+                    left: calc($base * $i * 2) !important;
+                }
+
+                .position-right-#{$i} {
+                    right: calc($base * $i * 2) !important;
+                }
+
+                .position-top-n#{$i} {
+                    top: calc(0em - $base * $i * 2) !important;
+                }
+
+                .position-bottom-n#{$i} {
+                    bottom: calc(0em - $base * $i * 2) !important;
+                }
+
+                .position-left-n#{$i} {
+                    left: calc(0em - $base * $i * 2) !important;
+                }
+
+                .position-right-n#{$i} {
+                    right: calc(0em - $base * $i * 2) !important;
+                }
+            }
+        }
+    }
+}

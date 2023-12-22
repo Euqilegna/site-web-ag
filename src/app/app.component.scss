@@ -1,5 +1,6 @@
-@import "../assets/css/mixins/mixins-screen";
+@import "../assets/css/mixins/mixins";
 @import "../assets/css/variables/custom_variables";
+@import "../assets/css/variables/breakpoints";
 
 .background {
     &_menu {
@@ -21,7 +22,14 @@
     font-weight: bolder;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 // ===========< Header >===========
+#header-desktop {
+    height: 400px;
+}
 
 .imgHeader {
     position: absolute;
@@ -31,19 +39,26 @@
     right: 0%;
 }
 
+#emojiContainer {
+    font-size: 35px;
+}
+
+// ===========< Home >===========
+.btn-home {
+    border-radius: 50px;
+
+}
+
 // ===========< About >===========
 
-#apropos {
-    height: 875px;
+.icon-about {
+    font-size: 40px;
 }
 
 // ===========< Skills >===========
 
 .skills {
     background-image: url("../assets/image/background_skills.png");
-    &__desktop {
-        height: 250px;
-    }
 }
 
 .card {
@@ -59,18 +74,12 @@
 
 // ===========< Portfolio >===========
 
-.background-img-portfolio {
-    background-image: url("../assets/image/background_user_book.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-
-.card-projet-portfolio {
-    backdrop-filter: blur(40px);
-    border-radius: 20px;
-}
-
 // ===========< Contact >===========
+
+.background-contact {
+    color: white;
+    background-color: #103717e5;
+}
 
 // ===========< Mixins >===========
 @each $breakpoint in $breakpointsKeys {
@@ -78,17 +87,19 @@
         .height-img-header {
             height: map-get($custom-height-img-header, $breakpoint);
         }
-        .width-location {
-            width: map-get($custom-width-location, $breakpoint);
-        }
         .height-location {
             height: map-get($custom-height-location, $breakpoint);
-        }
-        .width-img-about {
-            height: map-get($custom-width-img-about, $breakpoint);
         }
         .height-img-about {
             height: map-get($custom-height-img-about, $breakpoint);
         }
     }
+}
+
+fa-icon {
+    font-size: 20px;
+}
+
+.icon__footer {
+    font-size: 20px;
 }

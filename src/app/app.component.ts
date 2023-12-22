@@ -1,7 +1,9 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { isMobileDevice, isTabletDevice } from './_helpers/tools';
-import { faEnvelope, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { bounceInRightOnEnterAnimation, bounceOutRightAnimation, bounceOutRightOnLeaveAnimation, fadeInUpOnEnterAnimation, fadeOutUpOnLeaveAnimation, tadaAnimation, tadaOnEnterAnimation } from 'angular-animations';
+import { faCloudArrowDown, faPaperPlane, faSeedling } from '@fortawesome/free-solid-svg-icons';
+import { bounceInRightOnEnterAnimation, bounceOutRightOnLeaveAnimation, fadeInUpOnEnterAnimation, fadeOutUpOnLeaveAnimation, tadaAnimation } from 'angular-animations';
+import { faHandshake } from '@fortawesome/free-regular-svg-icons';
+import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
 
 @Component({
   selector: 'app-root',
@@ -18,16 +20,42 @@ import { bounceInRightOnEnterAnimation, bounceOutRightAnimation, bounceOutRightO
 
 export class AppComponent implements OnInit {
   animState = false;
-  iconMail = faEnvelope
-  iconDownload = faFileArrowDown
+  iconMail = faPaperPlane
+  iconDownload = faCloudArrowDown
+  iconHandShake = faHandshake
+  iconSeedling = faSeedling
 
   isMobile!: boolean;
   isTabletDevice!: boolean
 
-  constructor() { }
+
+  galleryId = 'myLightbox';
+  items: GalleryItem[] = [
+    new ImageItem({
+      src: "../assets/image/portfolio-gallery/dashboard-bibli-screen.PNG",
+      thumb: "../assets/image/portfolio-gallery/dashboard-bibli-screen.PNG",
+    }),
+    new ImageItem({
+      src: "../assets/image/portfolio-gallery/dashboard-screen.PNG",
+      thumb: "../assets/image/portfolio-gallery/dashboard-screen.PNG",
+    }),
+    new ImageItem({
+      src: "../assets/image/portfolio-gallery/dashboard-whishlist-screen.PNG",
+      thumb: "../assets/image/portfolio-gallery/dashboard-whishlist-screen.PNG",
+    }),
+  ];
+
+
+  constructor(
+    public gallery: Gallery
+  ) { }
+
   ngOnInit() {
     this.isMobile = isMobileDevice()
     this.isTabletDevice = isTabletDevice()
+
+    const galleryRef = this.gallery.ref(this.galleryId);
+    galleryRef.load(this.items);
   }
 
 
@@ -90,15 +118,15 @@ export class AppComponent implements OnInit {
           this.animH2SkillsVisible = true
         }, 500)
         break
-        case 'skillsCardsContainer':
-          this.animCard1SkillsVisible = true
-          setTimeout(() => {
-            this.animCard2SkillsVisible = true
-          }, 500)
-          setTimeout(() => {
-            this.animCard3SkillsVisible = true
-          }, 1000)
-          break
+      case 'skillsCardsContainer':
+        this.animCard1SkillsVisible = true
+        setTimeout(() => {
+          this.animCard2SkillsVisible = true
+        }, 500)
+        setTimeout(() => {
+          this.animCard3SkillsVisible = true
+        }, 1000)
+        break
       case 'portfolioTitleContainer':
         this.animH1PortfolioVisible = true
         setTimeout(() => {

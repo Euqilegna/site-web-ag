@@ -1,0 +1,103 @@
+@each $breakpoint in $breakpointsKeys {
+    @include mq($breakpoint) {
+        $base-typography-height: map-get($base-typography-heights, $breakpoint);
+        h1 {
+            font-size: calc($base-typography-height * 7) !important;
+            font-family: "Montserrat";
+        }
+
+        h2 {
+            font-size: calc($base-typography-height * 6) !important;
+            font-family: "Montserrat";
+        }
+
+        h3 {
+            font-size: calc($base-typography-height * 5) !important;
+            font-family: "Montserrat";
+        }
+
+        h4 {
+            font-size: calc($base-typography-height * 4) !important;
+        }
+
+        h5 {
+            font-size: calc($base-typography-height * 3 + 2px) !important;
+        }
+
+        h6,
+        p,
+        span,
+        label,
+        mat-label,
+        .mat-mdc-paginator-range-actions,
+        .mat-mdc-paginator-page-size-label {
+            font-size: calc($base-typography-height * 3) !important;
+        }
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    * {
+        font-size: 1em;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.texteditor-render {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+    }
+}
